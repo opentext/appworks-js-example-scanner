@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Document Scanner Demo</title>
+    <link rel="stylesheet" href="css/style.css"></link>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="appworks.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+
+  </head>
+  <body>
+
+    <div id="intro-wrapper">
+      <div id="intro">
+        <div style="font-weight:bold; text-align:center; margin-bottom:8px;">AppWorks Document Scanner Demo</div>
+        <p>You have three buttons below, all of which invoke AWScanner.scanDocument, but each receive results in a different way.</P>
+        <p><b>&quot;File Path&quot;</b> will return a file path of the PDF document</p>
+        <p><b>&quot;Base64&quot;</b> will return a base64 data representation of the PDF document</p>
+        <p><b>&quot;Doc Provider&quot;</b> will invoke the document provider to send the PDF document to another app on the device</p>
+      </div>
+    </div>
+
+    <div id="content-wrapper">
+      <div><button type="button" id="go0-button" class="go-button vertical-space" onclick="scanDocument(0);">Scan and get file path</button></div>
+      <div><button type="button" id="go1-button" class="go-button vertical-space" onclick="scanDocument(1);">Scan and get base64 data</button></div>
+      <div><button type="button" id="go2-button" class="go-button vertical-space" onclick="scanDocument(2);">Scan and invoke doc provider</button></div>
+    </div>
+
+    <div id="result-wrapper">
+      <div id="result">
+        Result will appear here.
+    </div>
+
+    <div id="version">Version 0.0.1</div>
+  </body>
+</html>
